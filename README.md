@@ -17,13 +17,10 @@ This project demonstrates how to build a **Spark Structured Streaming pipeline**
 Source (JSON files)  --->  Spark Structured Streaming  --->  Delta Lake (sink)
                             (trigger once / continuous)
 
+⚠️ **Archive**
+Use below options to archive processed data/files:
 
-<details>
-<summary>⚠️ Archive</summary>
+ .option("cleanSource","archive") \
+ .option("sourceArchiveDir","/Volumes/sparkcatalog/store/raw_volume/js_archive") \
 
-Use below options to archive processed data/files  
 
-```python
-.option("cleanSource","archive") \
-.option("sourceArchiveDir","/Volumes/sparkcatalog/store/raw_volume/js_archive") \
-</details> ```
